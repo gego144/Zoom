@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,9 +9,10 @@ public class carcontroller : MonoBehaviour
     
     
     Vector3 position;
-
+    public uiManager ui;
     void Start()
     {
+        
         position = transform.position;
     }
 
@@ -32,6 +32,7 @@ public class carcontroller : MonoBehaviour
         if (col.gameObject.tag == "enemy")
         {
             Destroy(gameObject);
+            ui.gameOverOn();
         }
     }
 }
