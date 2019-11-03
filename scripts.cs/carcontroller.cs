@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class carcontroller : MonoBehaviour
@@ -21,7 +20,7 @@ public class carcontroller : MonoBehaviour
     {
         position.x += Input.GetAxis("Horizontal") * carspeed * Time.deltaTime;
 
-        position.x = Mathf.Clamp(position.x, -2.2f, 2.2f);
+        position.x = Mathf.Clamp(position.x, -6.28f, 6.28f);
 
         transform.position = position;
 
