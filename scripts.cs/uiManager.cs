@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class uiManager : MonoBehaviour
 {
 
+    public Button[] buttons;
     public Text scoreText;
     bool gameOver;
     int score;
 
+        
 
     void Start()
     {
@@ -37,6 +38,10 @@ public class uiManager : MonoBehaviour
     public void gameOverOn()
     {
         gameOver = true;
+        foreach(Button button in buttons)
+        {
+            button.gameObject.SetActive(true);
+        }
     }
 
 
@@ -68,6 +73,5 @@ public class uiManager : MonoBehaviour
     {
         Application.Quit();
     }
-
 
 }
