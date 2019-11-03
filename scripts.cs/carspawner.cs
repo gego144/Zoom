@@ -1,6 +1,4 @@
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class carspawner : MonoBehaviour
@@ -24,7 +22,7 @@ public class carspawner : MonoBehaviour
 
         if (timer<= 0)
         {
-            Vector3 carpos = new Vector3(Random.Range(-2.2f, 2.2f), transform.position.y, transform.position.z);
+            Vector3 carpos = new Vector3(Random.Range(-6.28f, 6.28f), transform.position.y, transform.position.z);
             carNo = Random.Range(0, 5);
             Instantiate(cars[carNo], carpos, transform.rotation);
             timer = delayTimer;
